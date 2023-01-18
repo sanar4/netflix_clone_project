@@ -2,17 +2,23 @@ import React from "react";
 import { CssBaseline } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 
+import MovieInformation from "./MovieInformation/MovieInformation";
+import Movies from "./Movies/Movies";
+import Actors from "./Actors/Actors";
+import Profile from "./Profile/Profile";
+import NavBar from "./NavBar/NavBar";
+
 const App = () => {
   return (
     <div>
       <CssBaseline />
+      <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="movie" element={<h1>Movie Information</h1>} />
-          <Route path="actors" element={<h1>Actors</h1>} />
-          <Route path="movies" element={<h1>Movies</h1>} />
-          <Route path="profile" element={<h1>Profile</h1>} />
+          <Route path="movie" element={<MovieInformation />} />
+          <Route path="actors" element={<Actors />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="profile" element={<Profile />} />
         </Routes>
       </main>
     </div>
